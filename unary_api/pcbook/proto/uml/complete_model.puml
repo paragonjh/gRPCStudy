@@ -1,0 +1,153 @@
+@startuml
+
+hide empty methods
+hide empty fields
+skinparam classBackgroundColor #EEEEEE
+skinparam classArrowColor black
+skinparam classBorderColor black
+skinparam packageBackgroundColor white
+skinparam packageBorderColor black
+                     
+
+techschool.pcbook.Screen -- techschool.pcbook.Screen::Resoultion
+techschool.pcbook.Screen -- techschool.pcbook.Screen::Panel
+
+techschool.pcbook.Keyboard -- techschool.pcbook.Keyboard::Layout
+
+
+
+
+
+techschool.pcbook.CreateLaptopRequest -- techschool.pcbook.Laptop
+
+
+
+
+techschool.pcbook.Filter -- techschool.pcbook.Memory
+
+techschool.pcbook.GPU -- techschool.pcbook.Memory
+
+techschool.pcbook.Storage -- techschool.pcbook.Storage::Driver
+techschool.pcbook.Storage -- techschool.pcbook.Memory
+
+
+techschool.pcbook.Laptop -- techschool.pcbook.Screen
+techschool.pcbook.Laptop -- techschool.pcbook.CPU
+techschool.pcbook.Laptop -- techschool.pcbook.Laptop::Weight
+techschool.pcbook.Laptop -- techschool.pcbook.Storage
+techschool.pcbook.Laptop -- techschool.pcbook.Memory
+techschool.pcbook.Laptop -- techschool.pcbook.Keyboard
+techschool.pcbook.Laptop -- techschool.pcbook.GPU
+
+techschool.pcbook.Memory -- techschool.pcbook.Memory::Unit
+package techschool.pcbook {
+ class CPU {
+  brand: String 
+  name: String 
+  number_cores: Int 
+  number_threads: Int 
+  min_ghz: Double 
+  max_ghz: Double 
+ }
+ 
+ class CreateLaptopRequest {
+  laptop: Laptop 
+ }
+ 
+ class CreateLaptopResponse {
+  id: String 
+ }
+ 
+ class Filter {
+  max_price_usd: Double 
+  min_cpu_cores: Int 
+  min_cpu_ghz: Double 
+  min_ram: Memory 
+ }
+ 
+ class GPU {
+  brand: String 
+  name: String 
+  min_ghz: Double 
+  max_ghz: Double 
+  memory: Memory 
+ }
+ 
+ class Keyboard {
+  layout: Keyboard::Layout 
+  backlit: Bool 
+ }
+ 
+ enum Keyboard::Layout {
+  UNKNOWN
+  QWERTY
+  QWERTZ
+  AZERTY
+ }
+ 
+ class Laptop {
+  id: String 
+  brand: String 
+  name: String 
+  cpu: CPU 
+  ram: Memory 
+  gpus: GPU [*]
+  storages: Storage [*]
+  screen: Screen 
+  keyboard: Keyboard 
+  price_usd: Double 
+  release_year: Int 
+  weight: Laptop::Weight
+ }
+ 
+ class Laptop::Weight << oneOf >> {
+  weight_kg: Double 
+  weight_lb: Double 
+ }
+ 
+ class Memory {
+  value: Long 
+  unit: Memory::Unit 
+ }
+ 
+ enum Memory::Unit {
+  UNKNOWN
+  BIT
+  BYTE
+  KILOBYTE
+  MEGABYTE
+  GIGABYTE
+  TERABYTE
+ }
+ 
+ class Screen {
+  size_inch: Float 
+  resolution: Screen::Resoultion 
+  panel: Screen::Panel 
+  multitouch: Bool 
+ }
+ 
+ enum Screen::Panel {
+  UNKNOWN
+  IPS
+  OLED
+ }
+ 
+ class Screen::Resoultion {
+  width: Int 
+  height: Int 
+ }
+ 
+ class Storage {
+  driver: Storage::Driver 
+  memory: Memory 
+ }
+ 
+ enum Storage::Driver {
+  UNKNOWN
+  HDD
+  SSD
+ }
+ 
+}
+@enduml

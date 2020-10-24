@@ -1,0 +1,38 @@
+syntax = "proto3";
+
+package techschool.pcbook;
+//package proto;
+
+option go_package = ".;pb";
+option java_package = "com.gitlab.techschool.pcbook.pb";
+option java_multiple_files = true;
+
+import "laptop_message.proto";
+import "filter_message.proto";
+
+//Unary API
+message CreateLaptopRequest {
+  Laptop laptop = 1;
+}
+
+//Unary API
+message CreateLaptopResponse {
+  string id = 1;
+}
+
+//Server Steam API
+message SearchLaptopRequest {
+  Filter filter = 1;
+}
+
+//Server Stream API
+message SearchLaptopResponse {
+  Laptop laptop = 1;
+}
+
+service LaptopService {
+  //Unary gRPC API
+  rpc CreateLaptop(CreateLaptopRequest) returns (CreateLaptopResponse) {};
+  //Server Stream gRPC API
+  rpc SearchLaptop(SearchLaptopRequest) returns (stream SearchLaptopResponse) {};
+}

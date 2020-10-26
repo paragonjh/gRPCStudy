@@ -33,7 +33,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="85e7c436-e6f3-4d4b-8442-bf85926d7e2d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../.idea/gRPCStudy.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/pcbook.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../unary_api/pcbook/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../unary_api/pcbook/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +75,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="watcher.settings" />
   </component>
-  <component name="RunManager" selected="Go Build.go build gitlab.com/techschool/pcbook">
+  <component name="RunManager" selected="Go Test.go test pcbook">
     <configuration name="go build gitlab.com/techschool/pcbook" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="pcbook" />
       <working_directory value="$PROJECT_DIR$" />
@@ -98,10 +103,21 @@
       <filePath value="$PROJECT_DIR$" />
       <method v="2" />
     </configuration>
+    <configuration name="laptop_client_test.go" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="pcbook" />
+      <working_directory value="$PROJECT_DIR$/service" />
+      <framework value="gotest" />
+      <kind value="FILE" />
+      <package value="gitlab.com/techschool/pcbook" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$/service/laptop_client_test.go" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Go Build.go build gitlab.com/techschool/pcbook" />
         <item itemvalue="Go Test.go test pcbook" />
+        <item itemvalue="Go Build.go build gitlab.com/techschool/pcbook" />
+        <item itemvalue="Go Test.laptop_client_test.go" />
         <item itemvalue="Go Build.go build main.go" />
       </list>
     </recent_temporary>
@@ -130,7 +146,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
@@ -140,42 +155,56 @@
       <screen x="-1920" y="23" width="1920" height="1057" />
     </state>
     <state x="-1084" y="341" width="695" height="665" key="EditFileWatcherDialog/0.23.1440.804/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1602811506651" />
-    <state width="1123" height="134" key="GridCell.Tab.0.bottom" timestamp="1603265302179">
-      <screen x="-1920" y="23" width="1920" height="1057" />
+    <state width="1878" height="191" key="GridCell.Tab.0.bottom" timestamp="1603673368383">
+      <screen x="-1920" y="23" width="1920" height="988" />
     </state>
     <state width="1123" height="134" key="GridCell.Tab.0.bottom/0.23.1440.804/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1603265302179" />
+    <state width="1209" height="177" key="GridCell.Tab.0.bottom/0.23.1440.806@0.23.1440.806" timestamp="1603418456692" />
+    <state width="1398" height="145" key="GridCell.Tab.0.bottom/0.23.1440.808/-211.-1057.1920.1057@0.23.1440.808" timestamp="1603636547004" />
     <state width="1499" height="145" key="GridCell.Tab.0.bottom/0.23.1440.812/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1602814251014" />
-    <state width="1123" height="134" key="GridCell.Tab.0.center" timestamp="1603265302179">
-      <screen x="-1920" y="23" width="1920" height="1057" />
+    <state width="1878" height="191" key="GridCell.Tab.0.bottom/0.23.1440.877/-1920.23.1920.988@-1920.23.1920.988" timestamp="1603673368383" />
+    <state width="1878" height="191" key="GridCell.Tab.0.center" timestamp="1603673368382">
+      <screen x="-1920" y="23" width="1920" height="988" />
     </state>
     <state width="1123" height="134" key="GridCell.Tab.0.center/0.23.1440.804/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1603265302179" />
+    <state width="1209" height="177" key="GridCell.Tab.0.center/0.23.1440.806@0.23.1440.806" timestamp="1603418456691" />
+    <state width="1398" height="145" key="GridCell.Tab.0.center/0.23.1440.808/-211.-1057.1920.1057@0.23.1440.808" timestamp="1603636547002" />
     <state width="1499" height="145" key="GridCell.Tab.0.center/0.23.1440.812/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1602814251013" />
-    <state width="1123" height="134" key="GridCell.Tab.0.left" timestamp="1603265302179">
-      <screen x="-1920" y="23" width="1920" height="1057" />
+    <state width="1878" height="191" key="GridCell.Tab.0.center/0.23.1440.877/-1920.23.1920.988@-1920.23.1920.988" timestamp="1603673368382" />
+    <state width="1878" height="191" key="GridCell.Tab.0.left" timestamp="1603673368381">
+      <screen x="-1920" y="23" width="1920" height="988" />
     </state>
     <state width="1123" height="134" key="GridCell.Tab.0.left/0.23.1440.804/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1603265302179" />
+    <state width="1209" height="177" key="GridCell.Tab.0.left/0.23.1440.806@0.23.1440.806" timestamp="1603418456691" />
+    <state width="1398" height="145" key="GridCell.Tab.0.left/0.23.1440.808/-211.-1057.1920.1057@0.23.1440.808" timestamp="1603636547001" />
     <state width="1499" height="145" key="GridCell.Tab.0.left/0.23.1440.812/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1602814251012" />
-    <state width="1123" height="134" key="GridCell.Tab.0.right" timestamp="1603265302179">
-      <screen x="-1920" y="23" width="1920" height="1057" />
+    <state width="1878" height="191" key="GridCell.Tab.0.left/0.23.1440.877/-1920.23.1920.988@-1920.23.1920.988" timestamp="1603673368381" />
+    <state width="1878" height="191" key="GridCell.Tab.0.right" timestamp="1603673368383">
+      <screen x="-1920" y="23" width="1920" height="988" />
     </state>
     <state width="1123" height="134" key="GridCell.Tab.0.right/0.23.1440.804/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1603265302179" />
+    <state width="1209" height="177" key="GridCell.Tab.0.right/0.23.1440.806@0.23.1440.806" timestamp="1603418456691" />
+    <state width="1398" height="145" key="GridCell.Tab.0.right/0.23.1440.808/-211.-1057.1920.1057@0.23.1440.808" timestamp="1603636547003" />
     <state width="1499" height="145" key="GridCell.Tab.0.right/0.23.1440.812/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1602814251013" />
+    <state width="1878" height="191" key="GridCell.Tab.0.right/0.23.1440.877/-1920.23.1920.988@-1920.23.1920.988" timestamp="1603673368383" />
     <state x="-1390" y="109" key="SettingsEditor" timestamp="1602811508704">
       <screen x="-1920" y="23" width="1920" height="1057" />
     </state>
     <state x="-1390" y="109" key="SettingsEditor/0.23.1440.804/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1602811508704" />
-    <state x="-635" y="342" width="598" height="548" key="find.popup" timestamp="1602748763890">
-      <screen x="-1920" y="23" width="1920" height="1057" />
+    <state x="-635" y="321" width="598" height="548" key="find.popup" timestamp="1603673286525">
+      <screen x="-1920" y="23" width="1920" height="988" />
     </state>
     <state x="-635" y="342" width="598" height="548" key="find.popup/0.23.1440.804/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1602748763890" />
+    <state x="-635" y="321" width="598" height="548" key="find.popup/0.23.1440.877/-1920.23.1920.988@-1920.23.1920.988" timestamp="1603673286525" />
     <state x="-884" y="309" width="639" height="444" key="refactoring.ChangeSignatureDialog" timestamp="1603264438399">
       <screen x="-1920" y="23" width="1920" height="1057" />
     </state>
     <state x="-884" y="309" width="639" height="444" key="refactoring.ChangeSignatureDialog/0.23.1440.804/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1603264438399" />
-    <state x="-835" y="309" width="670" height="676" key="search.everywhere.popup" timestamp="1602724630071">
-      <screen x="-1920" y="23" width="1920" height="1057" />
+    <state x="814" y="242" width="670" height="517" key="search.everywhere.popup" timestamp="1603636253596">
+      <screen x="0" y="23" width="1440" height="808" />
     </state>
     <state x="-835" y="309" width="670" height="676" key="search.everywhere.popup/0.23.1440.804/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1602724630071" />
+    <state x="814" y="242" width="670" height="517" key="search.everywhere.popup/0.23.1440.808/-211.-1057.1920.1057@0.23.1440.808" timestamp="1603636253596" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/pcbook$go_test_pcbook.out" NAME="go test pcbook Coverage Results" MODIFIED="1602741044071" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="GoCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

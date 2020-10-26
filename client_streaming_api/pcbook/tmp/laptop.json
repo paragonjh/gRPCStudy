@@ -1,0 +1,61 @@
+{
+  "id": "51f72df7-aa14-4c39-a57c-b595bdf13fa4",
+  "brand": "Dell",
+  "name": "Vostro",
+  "cpu": {
+    "brand": "Intel",
+    "name": "Core i9-9980HK",
+    "number_cores": 8,
+    "number_threads": 10,
+    "min_ghz": 2.14808883840551,
+    "max_ghz": 2.1712922388590195
+  },
+  "ram": {
+    "value": "33",
+    "unit": "GIGABYTE"
+  },
+  "gpus": [
+    {
+      "brand": "Nvidia",
+      "name": "RTX 2060",
+      "min_ghz": 1.382980156348002,
+      "max_ghz": 1.5622527865665279,
+      "memory": {
+        "value": "5",
+        "unit": "GIGABYTE"
+      }
+    }
+  ],
+  "storages": [
+    {
+      "driver": "SSD",
+      "memory": {
+        "value": "456",
+        "unit": "GIGABYTE"
+      }
+    },
+    {
+      "driver": "HDD",
+      "memory": {
+        "value": "4",
+        "unit": "TERABYTE"
+      }
+    }
+  ],
+  "screen": {
+    "size_inch": 13.916982,
+    "resolution": {
+      "width": 7228,
+      "height": 4066
+    },
+    "panel": "OLED",
+    "multitouch": false
+  },
+  "keyboard": {
+    "layout": "AZERTY",
+    "backlit": false
+  },
+  "weight_kg": 2.7859712628793574,
+  "price_usd": 3025.928751328126,
+  "release_year": 2016
+}

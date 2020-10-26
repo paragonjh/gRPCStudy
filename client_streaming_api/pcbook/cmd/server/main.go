@@ -1,8 +1,6 @@
 package main
 
 import (
-	"flag"
-	"fmt"
 	"gitlab.com/techschool/pcbook/pb"
 	"gitlab.com/techschool/pcbook/service"
 	"google.golang.org/grpc"
@@ -10,19 +8,14 @@ import (
 	"net"
 )
 
+// Client Stream gRPC: Server App
 func main() {
-	port := flag.Int("port", 0, "the server port")
-	flag.Parse()
-	log.Printf("start server on port %d", *port)
-
-	laptopStore := service.NewInMemoryLaptopStore()
 	imageStore := service.NewDiskImageStore("img")
-	laptopServer := service.NewLaptopServer(laptopStore, imageStore)
+	laptopServer := service.NewLaptopServer(imageStore)
 	grpcServer := grpc.NewServer()
 	pb.RegisterLaptopServiceServer(grpcServer, laptopServer)
 
-	address := fmt.Sprintf("0.0.0.0:%d", *port)
-	listener, err := net.Listen("tcp", address)
+	listener, err := net.Listen("tcp", "localhost:4343")
 	if err != nil {
 		log.Fatal("cannot start server: ", err)
 	}

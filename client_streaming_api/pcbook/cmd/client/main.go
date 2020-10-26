@@ -3,12 +3,8 @@ package main
 import (
 	"bufio"
 	"context"
-	"flag"
 	"gitlab.com/techschool/pcbook/pb"
-	"gitlab.com/techschool/pcbook/sample"
 	"google.golang.org/grpc"
-	"google.golang.org/grpc/codes"
-	"google.golang.org/grpc/status"
 	"io"
 	"log"
 	"os"
@@ -16,63 +12,24 @@ import (
 	"time"
 )
 
-func createLaptop(laptopClient pb.LaptopServiceClient, laptop *pb.Laptop) {
-	req := &pb.CreateLaptopRequest{
-		Laptop: laptop,
-	}
-
-	// set timeout
-	ctx, cancel := context.WithTimeout(context.Background(), 5*time.Second)
-	defer cancel()
-
-	res, err := laptopClient.CreateLaptop(ctx, req)
+// Client Stream gRPC: Server App
+func main() {
+	conn, err := grpc.Dial("localhost:4343", grpc.WithInsecure())
 	if err != nil {
-		st, ok := status.FromError(err)
-		if ok && st.Code() == codes.AlreadyExists {
-			// not a big deal
-			log.Print("laptop already exists")
-		} else {
-			log.Fatal("cannot create laptop: ", err)
-		}
-		return
+		log.Fatal("cannot dial server: ", err)
 	}
 
-	log.Printf("created laptop with id: %s", res.Id)
+	laptopClient := pb.NewLaptopServiceClient(conn)
+	testUploadImage(laptopClient)
 }
 
-func searchLaptop(laptopClient pb.LaptopServiceClient, filter *pb.Filter) {
-	log.Print("search filter: ", filter)
-
-	ctx, cancel := context.WithTimeout(context.Background(), 5*time.Second)
-	defer cancel()
-
-	req := &pb.SearchLaptopRequest{Filter: filter}
-	stream, err := laptopClient.SearchLaptop(ctx, req)
-	if err != nil {
-		log.Fatal("cannot search laptop: ", err)
-	}
-
-	for {
-		res, err := stream.Recv()
-		if err == io.EOF {
-			return
-		}
-		if err != nil {
-			log.Fatal("cannot receive response: ", err)
-		}
-
-		laptop := res.GetLaptop()
-		log.Print("- found: ", laptop.GetId())
-		log.Print("  + brand: ", laptop.GetBrand())
-		log.Print("  + name: ", laptop.GetName())
-		log.Print("  + cpu cores: ", laptop.GetCpu().GetNumberCores())
-		log.Print("  + cpu min ghz: ", laptop.GetCpu().GetMinGhz())
-		log.Print("  + ram: ", laptop.GetRam())
-		log.Print("  + price: ", laptop.GetPriceUsd())
-	}
+func testUploadImage(laptopClient pb.LaptopServiceClient) {
+	//To-Do: Make Test Image Information
+	imageName := "testImg"
+	uploadImage(laptopClient, imageName, "tmp/laptop.jpg")
 }
 
-func uploadImage(laptopClient pb.LaptopServiceClient, laptopID string, imagePath string) {
+func uploadImage(laptopClient pb.LaptopServiceClient, imageName string, imagePath string) {
 	file, err := os.Open(imagePath)
 	if err != nil {
 		log.Fatal("cannot open image file: ", err)
@@ -90,7 +47,7 @@ func uploadImage(laptopClient pb.LaptopServiceClient, laptopID string, imagePath
 	req := &pb.UploadImageRequest{
 		Data: &pb.UploadImageRequest_Info{
 			Info: &pb.ImageInfo{
-				LaptopId:  laptopID,
+				ImageName: imageName,
 				ImageType: filepath.Ext(imagePath),
 			},
 		},
@@ -105,7 +62,7 @@ func uploadImage(laptopClient pb.LaptopServiceClient, laptopID string, imagePath
 	buffer := make([]byte, 1024)
 
 	for {
-		//n
+		//File Chunk by buffer size(1kb)
 		_, err := reader.Read(buffer)
 		if err == io.EOF {
 			break
@@ -133,106 +90,3 @@ func uploadImage(laptopClient pb.LaptopServiceClient, laptopID string, imagePath
 
 	log.Printf("image uploaded with id: %s, size: %d", res.GetId(), res.GetSize())
 }
-
-func testCreateLaptop(laptopClient pb.LaptopServiceClient) {
-	createLaptop(laptopClient, sample.NewLaptop())
-}
-
-func testSearchLaptop(laptopClient pb.LaptopServiceClient) {
-	for i := 0; i < 10; i++ {
-		createLaptop(laptopClient, sample.NewLaptop())
-	}
-
-	filter := &pb.Filter{
-		MaxPriceUsd: 3000,
-		MinCpuCores: 4,
-		MinCpuGhz:   2.5,
-		MinRam:      &pb.Memory{Value: 8, Unit: pb.Memory_GIGABYTE},
-	}
-
-	searchLaptop(laptopClient, filter)
-}
-
-func testUploadImage(laptopClient pb.LaptopServiceClient) {
-	laptop := sample.NewLaptop()
-	createLaptop(laptopClient, laptop)
-	uploadImage(laptopClient, laptop.GetId(), "tmp/laptop.jpg")
-}
-
-//Client Stream API
-func main() {
-	serverAddress := flag.String("address", "", "the server address")
-	flag.Parse()
-	log.Printf("dial server %s", *serverAddress)
-
-	conn, err := grpc.Dial(*serverAddress, grpc.WithInsecure())
-	if err != nil {
-		log.Fatal("cannot dial server: ", err)
-	}
-
-	laptopClient := pb.NewLaptopServiceClient(conn)
-	testUploadImage(laptopClient)
-}
-
-/*Server Stream API Test
-func main() {
-	serverAddress := flag.String("address", "", "the server address")
-	flag.Parse()
-	log.Printf("dial server %s", *serverAddress)
-
-	conn, err := grpc.Dial(*serverAddress, grpc.WithInsecure())
-	if err != nil {
-		log.Fatal("cannot dial server: ", err)
-	}
-
-	laptopClient := pb.NewLaptopServiceClient(conn)
-	for i := 0; i < 10; i++ {
-		createLaptop(laptopClient, sample.NewLaptop())
-	}
-
-	filter := &pb.Filter{
-		MaxPriceUsd: 3000,
-		MinCpuCores: 4,
-		MinCpuGhz:   2.5,
-		MinRam:      &pb.Memory{Value: 8, Unit: pb.Memory_GIGABYTE},
-	}
-
-	searchLaptop(laptopClient, filter)
-}
-*/
-
-/* Unary API Test
-func main() {
-	serverAddress := flag.String("address", "", "the server address")
-	flag.Parse()
-	log.Printf("dial server %s", *serverAddress)
-
-	conn, err := grpc.Dial(*serverAddress, grpc.WithInsecure())
-	if err != nil {
-		log.Fatal("cannot dial server: ", err)
-	}
-
-	laptop := sample.NewLaptop()
-	req := &pb.CreateLaptopRequest{
-		Laptop: laptop,
-	}
-
-	// set timeout
-	ctx, cancel := context.WithTimeout(context.Background(), 5*time.Second)
-	defer cancel()
-
-	res, err := laptopClient.CreateLaptop(ctx, req)
-	if err != nil {
-		st, ok := status.FromError(err)
-		if ok && st.Code() == codes.AlreadyExists {
-			// not a big deal
-			log.Print("laptop already exists")
-		} else {
-			log.Fatal("cannot create laptop: ", err)
-		}
-		return
-	}
-
-	log.Printf("created laptop with id: %s", res.Id)
-}
-*/

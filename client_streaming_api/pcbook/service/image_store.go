@@ -20,9 +20,9 @@ type DiskImageStore struct {
 }
 
 type ImageInfo struct {
-	LaptopID string
-	Type     string
-	Path     string
+	ImageID string
+	Type    string
+	Path    string
 }
 
 func NewDiskImageStore(imageFolder string) *DiskImageStore {
@@ -54,9 +54,9 @@ func (store *DiskImageStore) Save(laptopID string, imageType string, imageData b
 	defer store.mutex.Unlock()
 
 	store.images[imageID.String()] = &ImageInfo{
-		LaptopID: laptopID,
-		Type:     imageType,
-		Path:     imagePath,
+		ImageID: laptopID,
+		Type:    imageType,
+		Path:    imagePath,
 	}
 
 	return imageID.String(), nil

@@ -40,6 +40,7 @@ func (server *LaptopServer) UploadImage(stream pb.LaptopService_UploadImageServe
 	imageData := bytes.Buffer{}
 	imageSize := 0
 	log.Printf("Start Image Download, Name: %s", imageName)
+
 	for {
 		if err := contextError(stream.Context()); err != nil {
 			return err

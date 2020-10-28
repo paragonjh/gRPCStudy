@@ -10,6 +10,7 @@ import (
 
 // Client Stream gRPC: Server App
 func main() {
+	log.SetFlags(log.LstdFlags | log.Lmicroseconds)
 	imageStore := service.NewDiskImageStore("img")
 	laptopServer := service.NewLaptopServer(imageStore)
 	grpcServer := grpc.NewServer()

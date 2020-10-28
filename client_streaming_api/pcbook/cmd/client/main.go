@@ -1,6 +1,7 @@
 package main
 
 import (
+	"C"
 	"bufio"
 	"context"
 	"gitlab.com/techschool/pcbook/pb"
@@ -14,6 +15,7 @@ import (
 
 // Client Stream gRPC: Server App
 func main() {
+	log.SetFlags(log.LstdFlags | log.Lmicroseconds)
 	conn, err := grpc.Dial("localhost:4343", grpc.WithInsecure())
 	if err != nil {
 		log.Fatal("cannot dial server: ", err)
@@ -22,6 +24,20 @@ func main() {
 	laptopClient := pb.NewLaptopServiceClient(conn)
 	testUploadImage(laptopClient)
 }
+
+/*
+func UploadImageToVNet(b *C.char, imageName string) {
+
+}
+
+func testUploadImageToVNet() {
+
+}
+
+func UploadImageToVNet(imageBytes []byte, imageName string) {
+
+}
+*/
 
 func testUploadImage(laptopClient pb.LaptopServiceClient) {
 	//To-Do: Make Test Image Information
@@ -53,6 +69,7 @@ func uploadImage(laptopClient pb.LaptopServiceClient, imageName string, imagePat
 		},
 	}
 
+	log.Printf("Image Send Start")
 	err = stream.Send(req)
 	if err != nil {
 		log.Fatal("cannot send image info to server: ", err)
@@ -82,7 +99,7 @@ func uploadImage(laptopClient pb.LaptopServiceClient, imageName string, imagePat
 			log.Fatal("cannot send chunk to server: ", err)
 		}
 	}
-
+	log.Printf("Image Send End")
 	res, err := stream.CloseAndRecv()
 	if err != nil {
 		log.Fatal("cannot receive response: ", err)

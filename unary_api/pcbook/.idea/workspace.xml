@@ -33,7 +33,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="85e7c436-e6f3-4d4b-8442-bf85926d7e2d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../client_streaming_api/pcbook/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../client_streaming_api/pcbook/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../client_streaming_api/pcbook/cmd/client/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/../../client_streaming_api/pcbook/cmd/client/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../server_streaming_api/pcbook/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../server_streaming_api/pcbook/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -136,6 +140,10 @@
     <integration-enabled>true</integration-enabled>
   </component>
   <component name="WindowStateProjectService">
+    <state x="-921" y="359" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1603865476695">
+      <screen x="-1920" y="23" width="1920" height="1057" />
+    </state>
+    <state x="-921" y="359" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1440.808/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1603865476695" />
     <state x="-1084" y="341" width="695" height="665" key="EditFileWatcherDialog" timestamp="1602811506651">
       <screen x="-1920" y="23" width="1920" height="1057" />
     </state>

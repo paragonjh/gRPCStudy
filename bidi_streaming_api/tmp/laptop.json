@@ -1,0 +1,61 @@
+{
+  "id": "d89c4dee-463e-403b-93d5-d3e9ec756e3d",
+  "brand": "Lenovo",
+  "name": "Thinkpad X1",
+  "cpu": {
+    "brand": "Intel",
+    "name": "Xeon E-2286M",
+    "number_cores": 8,
+    "number_threads": 8,
+    "min_ghz": 2.3804553245805224,
+    "max_ghz": 3.254117510947873
+  },
+  "ram": {
+    "value": "13",
+    "unit": "GIGABYTE"
+  },
+  "gpus": [
+    {
+      "brand": "AMD",
+      "name": "RX 590",
+      "min_ghz": 1.0228608842758362,
+      "max_ghz": 1.8260629228029228,
+      "memory": {
+        "value": "6",
+        "unit": "GIGABYTE"
+      }
+    }
+  ],
+  "storages": [
+    {
+      "driver": "SSD",
+      "memory": {
+        "value": "639",
+        "unit": "GIGABYTE"
+      }
+    },
+    {
+      "driver": "HDD",
+      "memory": {
+        "value": "3",
+        "unit": "TERABYTE"
+      }
+    }
+  ],
+  "screen": {
+    "size_inch": 16.40003,
+    "resolution": {
+      "width": 5582,
+      "height": 3140
+    },
+    "panel": "OLED",
+    "multitouch": false
+  },
+  "keyboard": {
+    "layout": "QWERTY",
+    "backlit": true
+  },
+  "weight_kg": 1.7683018765195797,
+  "price_usd": 2976.2411370895243,
+  "release_year": 2018
+}

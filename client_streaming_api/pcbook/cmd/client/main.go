@@ -25,20 +25,6 @@ func main() {
 	testUploadImage(laptopClient)
 }
 
-/*
-func UploadImageToVNet(b *C.char, imageName string) {
-
-}
-
-func testUploadImageToVNet() {
-
-}
-
-func UploadImageToVNet(imageBytes []byte, imageName string) {
-
-}
-*/
-
 func testUploadImage(laptopClient pb.LaptopServiceClient) {
 	//To-Do: Make Test Image Information
 	imageName := "testImg"

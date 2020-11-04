@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package techschool.pcbook;
+
+option go_package = ".;pb";
+
+message ImageInfo {
+  string image_name = 1;
+  string image_type = 2;
+}

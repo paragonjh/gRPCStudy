@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:ref" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:ref" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:for" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="85e7c436-e6f3-4d4b-8442-bf85926d7e2d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/cmd/client/libVNetClient.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmd/client/libVNetClient.so" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmd/client/makeLibaray.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmd/client/test" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmd/client/test.cc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dev.Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tmp/test1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tmp/test2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tmp/test3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tmp/test4.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmd/client/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/client/libVNetClient.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../server_streaming_api/pcbook/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../server_streaming_api/pcbook/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Go File" />
+      </list>
+    </option>
+  </component>
+  <component name="GOROOT" path="/usr/local/Cellar/go/1.15.2/libexec" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="GoLibraries">
+    <option name="indexEntireGoPath" value="false" />
+  </component>
+  <component name="ProjectId" id="1iqVbFGXgJqHAIp3ZeS9n463tM0" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DefaultGoTemplateProperty" value="Go File" />
+    <property name="NewWatcherDialog.advanced.open" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="go.import.settings.migrated" value="true" />
+    <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="watcher.settings" />
+  </component>
+  <component name="RunManager" selected="Go Build.go build gitlab.com/techschool/pcbook">
+    <configuration name="go build gitlab.com/techschool/pcbook" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="pcbook" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="gitlab.com/techschool/pcbook" />
+      <directory value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build main.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="pcbook" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/main.go" />
+      <package value="pcbook" />
+      <directory value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go test pcbook" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="pcbook" />
+      <working_directory value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <kind value="DIRECTORY" />
+      <package value="gitlab.com/techschool/pcbook" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go test service" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="pcbook" />
+      <working_directory value="$PROJECT_DIR$/service" />
+      <framework value="gotest" />
+      <kind value="DIRECTORY" />
+      <package value="gitlab.com/techschool/pcbook" />
+      <directory value="$PROJECT_DIR$/service" />
+      <filePath value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="laptop_client_test.go" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="pcbook" />
+      <working_directory value="$PROJECT_DIR$/service" />
+      <framework value="gotest" />
+      <kind value="FILE" />
+      <package value="gitlab.com/techschool/pcbook" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$/service/laptop_client_test.go" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Go Build.go build gitlab.com/techschool/pcbook" />
+        <item itemvalue="Go Test.go test service" />
+        <item itemvalue="Go Test.go test pcbook" />
+        <item itemvalue="Go Test.laptop_client_test.go" />
+        <item itemvalue="Go Build.go build main.go" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="85e7c436-e6f3-4d4b-8442-bf85926d7e2d" name="Default Changelist" comment="" />
+      <created>1602635178824</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1602635178824</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="VgoProject">
+    <integration-enabled>true</integration-enabled>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="-1198" y="348" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1604459348163">
+      <screen x="-1920" y="23" width="1920" height="1057" />
+    </state>
+    <state x="-1198" y="348" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1440.808/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1604455167052" />
+    <state x="-1198" y="348" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1440.811/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1604459348163" />
+    <state x="-1084" y="341" width="695" height="665" key="EditFileWatcherDialog" timestamp="1602811506651">
+      <screen x="-1920" y="23" width="1920" height="1057" />
+    </state>
+    <state x="-1084" y="341" width="695" height="665" key="EditFileWatcherDialog/0.23.1440.804/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1602811506651" />
+    <state width="1432" height="291" key="GridCell.Tab.0.bottom" timestamp="1604303990199">
+      <screen x="-1920" y="23" width="1920" height="1057" />
+    </state>
+    <state width="1123" height="134" key="GridCell.Tab.0.bottom/0.23.1440.804/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1603265302179" />
+    <state width="1432" height="291" key="GridCell.Tab.0.bottom/0.23.1440.806/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1604303990199" />
+    <state width="1209" height="177" key="GridCell.Tab.0.bottom/0.23.1440.806@0.23.1440.806" timestamp="1603418456692" />
+    <state width="1878" height="188" key="GridCell.Tab.0.bottom/0.23.1440.808/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1603705621376" />
+    <state width="1398" height="145" key="GridCell.Tab.0.bottom/0.23.1440.808/-211.-1057.1920.1057@0.23.1440.808" timestamp="1603636547004" />
+    <state width="1499" height="145" key="GridCell.Tab.0.bottom/0.23.1440.812/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1602814251014" />
+    <state width="1878" height="188" key="GridCell.Tab.0.bottom/0.23.1440.877/-1920.23.1920.977@-1920.23.1920.977" timestamp="1603688195604" />
+    <state width="1878" height="191" key="GridCell.Tab.0.bottom/0.23.1440.877/-1920.23.1920.988@-1920.23.1920.988" timestamp="1603675401502" />
+    <state width="1432" height="291" key="GridCell.Tab.0.center" timestamp="1604303990198">
+      <screen x="-1920" y="23" width="1920" height="1057" />
+    </state>
+    <state width="1123" height="134" key="GridCell.Tab.0.center/0.23.1440.804/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1603265302179" />
+    <state width="1432" height="291" key="GridCell.Tab.0.center/0.23.1440.806/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1604303990198" />
+    <state width="1209" height="177" key="GridCell.Tab.0.center/0.23.1440.806@0.23.1440.806" timestamp="1603418456691" />
+    <state width="1878" height="188" key="GridCell.Tab.0.center/0.23.1440.808/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1603705621375" />
+    <state width="1398" height="145" key="GridCell.Tab.0.center/0.23.1440.808/-211.-1057.1920.1057@0.23.1440.808" timestamp="1603636547002" />
+    <state width="1499" height="145" key="GridCell.Tab.0.center/0.23.1440.812/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1602814251013" />
+    <state width="1878" height="188" key="GridCell.Tab.0.center/0.23.1440.877/-1920.23.1920.977@-1920.23.1920.977" timestamp="1603688195603" />
+    <state width="1878" height="191" key="GridCell.Tab.0.center/0.23.1440.877/-1920.23.1920.988@-1920.23.1920.988" timestamp="1603675401501" />
+    <state width="1432" height="291" key="GridCell.Tab.0.left" timestamp="1604303990197">
+      <screen x="-1920" y="23" width="1920" height="1057" />
+    </state>
+    <state width="1123" height="134" key="GridCell.Tab.0.left/0.23.1440.804/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1603265302179" />
+    <state width="1432" height="291" key="GridCell.Tab.0.left/0.23.1440.806/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1604303990197" />
+    <state width="1209" height="177" key="GridCell.Tab.0.left/0.23.1440.806@0.23.1440.806" timestamp="1603418456691" />
+    <state width="1878" height="188" key="GridCell.Tab.0.left/0.23.1440.808/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1603705621373" />
+    <state width="1398" height="145" key="GridCell.Tab.0.left/0.23.1440.808/-211.-1057.1920.1057@0.23.1440.808" timestamp="1603636547001" />
+    <state width="1499" height="145" key="GridCell.Tab.0.left/0.23.1440.812/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1602814251012" />
+    <state width="1878" height="188" key="GridCell.Tab.0.left/0.23.1440.877/-1920.23.1920.977@-1920.23.1920.977" timestamp="1603688195603" />
+    <state width="1878" height="191" key="GridCell.Tab.0.left/0.23.1440.877/-1920.23.1920.988@-1920.23.1920.988" timestamp="1603675401501" />
+    <state width="1432" height="291" key="GridCell.Tab.0.right" timestamp="1604303990198">
+      <screen x="-1920" y="23" width="1920" height="1057" />
+    </state>
+    <state width="1123" height="134" key="GridCell.Tab.0.right/0.23.1440.804/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1603265302179" />
+    <state width="1432" height="291" key="GridCell.Tab.0.right/0.23.1440.806/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1604303990198" />
+    <state width="1209" height="177" key="GridCell.Tab.0.right/0.23.1440.806@0.23.1440.806" timestamp="1603418456691" />
+    <state width="1878" height="188" key="GridCell.Tab.0.right/0.23.1440.808/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1603705621376" />
+    <state width="1398" height="145" key="GridCell.Tab.0.right/0.23.1440.808/-211.-1057.1920.1057@0.23.1440.808" timestamp="1603636547003" />
+    <state width="1499" height="145" key="GridCell.Tab.0.right/0.23.1440.812/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1602814251013" />
+    <state width="1878" height="188" key="GridCell.Tab.0.right/0.23.1440.877/-1920.23.1920.977@-1920.23.1920.977" timestamp="1603688195604" />
+    <state width="1878" height="191" key="GridCell.Tab.0.right/0.23.1440.877/-1920.23.1920.988@-1920.23.1920.988" timestamp="1603675401501" />
+    <state x="-1390" y="109" key="SettingsEditor" timestamp="1602811508704">
+      <screen x="-1920" y="23" width="1920" height="1057" />
+    </state>
+    <state x="-1390" y="109" key="SettingsEditor/0.23.1440.804/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1602811508704" />
+    <state x="-635" y="321" width="598" height="548" key="find.popup" timestamp="1603673286525">
+      <screen x="-1920" y="23" width="1920" height="988" />
+    </state>
+    <state x="-635" y="342" width="598" height="548" key="find.popup/0.23.1440.804/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1602748763890" />
+    <state x="-635" y="321" width="598" height="548" key="find.popup/0.23.1440.877/-1920.23.1920.988@-1920.23.1920.988" timestamp="1603673286525" />
+    <state x="-884" y="309" width="639" height="444" key="refactoring.ChangeSignatureDialog" timestamp="1603264438399">
+      <screen x="-1920" y="23" width="1920" height="1057" />
+    </state>
+    <state x="-884" y="309" width="639" height="444" key="refactoring.ChangeSignatureDialog/0.23.1440.804/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1603264438399" />
+    <state x="-835" y="309" width="894" height="677" key="search.everywhere.popup" timestamp="1604021342421">
+      <screen x="-1920" y="23" width="1920" height="1057" />
+    </state>
+    <state x="-835" y="309" width="670" height="676" key="search.everywhere.popup/0.23.1440.804/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1602724630071" />
+    <state x="-835" y="309" width="894" height="677" key="search.everywhere.popup/0.23.1440.806/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1604021342421" />
+    <state x="814" y="242" width="670" height="517" key="search.everywhere.popup/0.23.1440.808/-211.-1057.1920.1057@0.23.1440.808" timestamp="1603636253596" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/pcbook$go_test_pcbook.out" NAME="go test pcbook Coverage Results" MODIFIED="1602741044071" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="GoCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
+</project>

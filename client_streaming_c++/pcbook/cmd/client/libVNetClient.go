@@ -2,42 +2,35 @@ package main
 
 import (
 	"C"
-	"bufio"
 	"context"
 	"gitlab.com/techschool/pcbook/pb"
 	"google.golang.org/grpc"
-	"io"
 	"log"
-	"os"
-	"path/filepath"
 	"time"
+	"unsafe"
 )
 
-// Client Stream gRPC: Server App
-func main() {
+//export UploadImage
+func UploadImage(receivedImage unsafe.Pointer, imageSize C.int) {
 	log.SetFlags(log.LstdFlags | log.Lmicroseconds)
+
+	//
+	log.Printf("requested image size: %d", imageSize)
+	imageData := C.GoBytes(receivedImage, imageSize)
+
+	//
 	conn, err := grpc.Dial("localhost:4343", grpc.WithInsecure())
 	if err != nil {
 		log.Fatal("cannot dial server: ", err)
 	}
 
 	laptopClient := pb.NewLaptopServiceClient(conn)
-	testUploadImage(laptopClient)
+	uploadImage(laptopClient, imageData)
 }
 
-func testUploadImage(laptopClient pb.LaptopServiceClient) {
-	//To-Do: Make Test Image Information
-	imageName := "testImg"
-	uploadImage(laptopClient, imageName, "tmp/laptop.jpg")
-}
+func uploadImage(laptopClient pb.LaptopServiceClient, imageData []byte) {
 
-func uploadImage(laptopClient pb.LaptopServiceClient, imageName string, imagePath string) {
-	file, err := os.Open(imagePath)
-	if err != nil {
-		log.Fatal("cannot open image file: ", err)
-	}
-	defer file.Close()
-
+	log.Printf("requested image size: %d", len(imageData))
 	ctx, cancel := context.WithTimeout(context.Background(), 5*time.Second)
 	defer cancel()
 
@@ -49,8 +42,9 @@ func uploadImage(laptopClient pb.LaptopServiceClient, imageName string, imagePat
 	req := &pb.UploadImageRequest{
 		Data: &pb.UploadImageRequest_Info{
 			Info: &pb.ImageInfo{
-				ImageName: imageName,
-				ImageType: filepath.Ext(imagePath),
+				//To-Do: Add more image informations
+				ImageName: "testImage",
+				ImageType: ".jpg",
 			},
 		},
 	}
@@ -61,30 +55,26 @@ func uploadImage(laptopClient pb.LaptopServiceClient, imageName string, imagePat
 		log.Fatal("cannot send image info to server: ", err)
 	}
 
-	reader := bufio.NewReader(file)
-	buffer := make([]byte, 1024)
-
-	for {
-		//File Chunk by buffer size(1kb)
-		_, err := reader.Read(buffer)
-		if err == io.EOF {
-			break
+	//File chunk by 1kb and send image
+	chunkSize := 1024
+	for i := 0; i < len(imageData); i += chunkSize {
+		end := i + chunkSize
+		log.Printf("i: %d, end: %d", i, end)
+		if end > len(imageData) {
+			end = len(imageData)
 		}
-		if err != nil {
-			log.Fatal("cannot read chunk to buffer: ", err)
-		}
-
+		buffer := imageData[i:end]
 		req := &pb.UploadImageRequest{
 			Data: &pb.UploadImageRequest_ChunkData{
 				ChunkData: buffer[:],
 			},
 		}
-
 		err = stream.Send(req)
 		if err != nil {
 			log.Fatal("cannot send chunk to server: ", err)
 		}
 	}
+
 	log.Printf("Image Send End")
 	res, err := stream.CloseAndRecv()
 	if err != nil {
@@ -92,4 +82,9 @@ func uploadImage(laptopClient pb.LaptopServiceClient, imageName string, imagePat
 	}
 
 	log.Printf("image uploaded with id: %s, size: %d", res.GetId(), res.GetSize())
+}
+
+// Client Stream gRPC: Server App
+func main() {
+
 }

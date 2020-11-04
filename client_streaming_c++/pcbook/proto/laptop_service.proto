@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+package techschool.pcbook;
+//package proto;
+
+option go_package = ".;pb";
+
+import "image_message.proto";
+
+message UploadImageRequest {
+  oneof data {
+    ImageInfo info = 1;
+    bytes chunk_data = 2;
+  };
+}
+
+message UploadImageResponse {
+  string id = 1;
+  uint32 size = 2;
+}
+
+service LaptopService {
+  //Client Stream gRPC API
+  rpc UploadImage(stream UploadImageRequest) returns (UploadImageResponse) {};
+}

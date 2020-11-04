@@ -14,11 +14,11 @@ import (
 func UploadImage(receivedImage unsafe.Pointer, imageSize C.int) {
 	log.SetFlags(log.LstdFlags | log.Lmicroseconds)
 
-	//
+	//Make ImageFile to Golang Byte
 	log.Printf("requested image size: %d", imageSize)
 	imageData := C.GoBytes(receivedImage, imageSize)
 
-	//
+	//Creates a client connection to the VNet server
 	conn, err := grpc.Dial("localhost:4343", grpc.WithInsecure())
 	if err != nil {
 		log.Fatal("cannot dial server: ", err)

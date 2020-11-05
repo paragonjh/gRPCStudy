@@ -59,7 +59,7 @@ func uploadImage(laptopClient pb.LaptopServiceClient, imageData []byte) {
 	chunkSize := 1024
 	for i := 0; i < len(imageData); i += chunkSize {
 		end := i + chunkSize
-		log.Printf("i: %d, end: %d", i, end)
+		//log.Printf("i: %d, end: %d", i, end)
 		if end > len(imageData) {
 			end = len(imageData)
 		}
